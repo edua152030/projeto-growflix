@@ -3,9 +3,6 @@ body{
     padding: 0;
 }
 
-header{
-    height: 80vw;
-}
 
 #img-grow{
     width: 100%;
@@ -34,4 +31,16 @@ a{
 
 .card-3{
     font-size: 50px;
+}
+
+.himg {
+    height: 200px;
+    max-width: 100%; 
+    overflow: hidden; 
+    transition-duration: 1s;
+}
+
+.himg:hover {
+    height: 250px;
+    transition-duration: 1s;
 }
