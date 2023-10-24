@@ -42,24 +42,19 @@ a{
 
 .card-capa:hover { 
     transform: scale(1.20);
+    z-index: -1;
 }
 
 .card-hiden{
     display: none;
 }
 
-.modal-fullscreen {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+footer{
+    position: relative;
+    z-index: 3;
 }
 
-.modal-fullscreen .modal-dialog {
-    max-width: 100%;
-    margin: 0;
-}
-
-.modal-fullscreen .modal-content {
-    width: 100%;
-    height: 100%;
+footer a{
+    text-decoration: none;
+    color: rgb(138, 138, 138);
 }

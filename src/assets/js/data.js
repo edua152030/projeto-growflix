@@ -1,4 +1,4 @@
-const cards = [
+const cardsepisodios = [
     {
         capa: 'https://img.youtube.com/vi/aJ-HZuLcKeA/sddefault.jpg',
         url: 'https://www.youtube.com/embed/aJ-HZuLcKeA',
@@ -51,24 +51,24 @@ const cards = [
     }
 ]
 
-const capaepisodios = document.querySelector('.card-episodios');
+const capaepisodios = document.querySelector('.card-episodios')
 
-const cardContainer = document.createElement('div');
-cardContainer.classList.add('d-flex'); 
-cardContainer.classList.add('flex-wrap')
+const cardContainerEp = document.createElement('div')
+cardContainerEp.classList.add('d-flex') 
+cardContainerEp.classList.add('flex-wrap')
 
-capaepisodios.appendChild(cardContainer);
+capaepisodios.appendChild(cardContainerEp)
 
-cards.forEach((card) => {
-    const cardElement = document.createElement('div');
+cardsepisodios.forEach((cardEp) => {
+    const cardElementEp = document.createElement('div')
 
-    cardElement.innerHTML = `
+    cardElementEp.innerHTML = `
         <div class="container card-container">
             <div class="row">
                 <div class="card-content">
-                    <img class="card-capa" src="${card.capa}">
-                    <h4 class="card-hiden">${card.titulo}</h4>
-                    <butto class="btn btn-primary card-hiden" data-bs-toggle="modal" data-bs-target="#modal-episodio">assistir</button>
+                    <img class="card-capa" src="${cardEp.capa}">
+                    <h4 class="text-light card-hiden">${cardEp.titulo}</h4>
+                    <button class="btn btn-primary card-hiden " data-bs-toggle="modal" data-bs-target="#modal-episodio">assistir</button>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@ cards.forEach((card) => {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <iframe width="100%" height="100vh" src="${card.url}" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="100%" height="100vh" src="${cardEp.url}" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -89,5 +89,73 @@ cards.forEach((card) => {
 
 
 
-    cardContainer.appendChild(cardElement);
+    cardContainerEp.appendChild(cardElementEp)
 });
+
+const cardwebnar = [
+    {
+        capa: 'https://img.youtube.com/vi/WKbLXuP9S-c/sddefault.jpg',
+        url: 'https://www.youtube.com/embed/WKbLXuP9S-c',
+        titulo: 'Webnar - reciando interface do linkedin com fluter'
+    },
+    {
+        capa: 'https://img.youtube.com/vi/dJ6y1zMjVXU/sddefault.jpg',
+        url: 'https://www.youtube.com/embed/dJ6y1zMjVXU',
+        titulo: 'Webnar recriando a interface do instagran com fluter'
+    },
+    {
+        capa: 'https://img.youtube.com/vi/8rdJsqUjsGg/sddefault.jpg',
+        url: 'https://www.youtube.com/embed/8rdJsqUjsGg',
+        titulo: 'Webnar - recriando a interface do ifood com fluter'
+    },
+    {
+        capa: 'https://img.youtube.com/vi/C4p_7qBsECw/sddefault.jpg',
+        url: 'https://www.youtube.com/embed/C4p_7qBsECw',
+        titulo: 'Webnar -  recriando a interface do picpay com fluter'
+    },
+    {
+        capa: 'https://img.youtube.com/vi/L1pKoMC6hWk/sddefault.jpg',
+        url: 'https://www.youtube.com/embed/L1pKoMC6hWk',
+        titulo: 'Webnar - recriando a interface do whatsapp com fluter'
+    }
+]
+
+const capawebnar = document.querySelector('.card-webnar')
+
+const cardContainerWeb = document.createElement('div')
+cardContainerWeb.classList.add('d-flex')
+cardContainerWeb.classList.add('flex-wrap')
+
+cardwebnar.forEach((cardWeb, index) => {
+    const cardElementWeb = document.createElement('div')
+    const modalId = `modal-webnar-${index}`; // Novo ID único
+
+    cardElementWeb.innerHTML = `
+        <div class="container card-container">
+            <div class="row">
+                <div class="card-content">
+                    <img class="card-capa" src="${cardWeb.capa}">
+                    <h4 class="text-light card-hiden">${cardWeb.titulo}</h4>
+                    <button class="btn btn-primary card-hiden" data-bs-toggle="modal" data-bs-target="#${modalId}">assistir</button>
+                </div>
+            </div>
+        </div>
+             
+        <div class="modal" id="${modalId}" tabindex="3" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="100vh" src="${cardWeb.url}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+`;
+
+    cardContainerWeb.appendChild(cardElementWeb)
+})
+
+capawebnar.appendChild(cardContainerWeb)
