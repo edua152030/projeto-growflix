@@ -3,9 +3,13 @@ body{
     padding: 0;
 }
 
+header{
+    overflow: hidden !important;
+}
 
 #img-grow{
     width: 100%;
+    height: 100vh;
     float: left;
     position: absolute;
     z-index: -1;
@@ -25,22 +29,37 @@ a{
     margin-top: 30% !important;
 }
 
-.card-2{
-    font-size: 15px;
+.card-container{
+    overflow: hidden !important;
+    width: 300px;
 }
 
-.card-3{
-    font-size: 50px;
+.card-capa{
+    width: 300px;
+    transform: scale(1);
+    transition: transform 0.3s;
 }
 
-.himg {
-    height: 200px;
-    max-width: 100%; 
-    overflow: hidden; 
-    transition-duration: 1s;
+.card-capa:hover { 
+    transform: scale(1.20);
 }
 
-.himg:hover {
-    height: 250px;
-    transition-duration: 1s;
+.card-hiden{
+    display: none;
+}
+
+.modal-fullscreen {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-fullscreen .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+}
+
+.modal-fullscreen .modal-content {
+    width: 100%;
+    height: 100%;
 }
