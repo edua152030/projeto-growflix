@@ -297,3 +297,4 @@ diversos.forEach((diversos, index) => {
     `
     cardDiversosEp.appendChild(cardElementeDiversos)
 })
+//fim do diversos
