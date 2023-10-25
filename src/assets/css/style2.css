@@ -32,6 +32,7 @@ a{
 .card-container{
     overflow: hidden !important;
     width: 300px;
+    justify-content: baseline;
 }
 
 .card-capa{

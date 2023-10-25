@@ -1,3 +1,4 @@
+//episodios
 const cardsepisodios = [
     {
         capa: 'https://img.youtube.com/vi/aJ-HZuLcKeA/sddefault.jpg',
@@ -90,8 +91,10 @@ cardsepisodios.forEach((cardEp) => {
 
 
     cardContainerEp.appendChild(cardElementEp)
-});
+})
+//fim episodios
 
+//webnar
 const cardwebnar = [
     {
         capa: 'https://img.youtube.com/vi/WKbLXuP9S-c/sddefault.jpg',
@@ -128,7 +131,7 @@ cardContainerWeb.classList.add('flex-wrap')
 
 cardwebnar.forEach((cardWeb, index) => {
     const cardElementWeb = document.createElement('div')
-    const modalId = `modal-webnar-${index}`; // Novo ID único
+    const modalId = `modal-webnar-${index}`
 
     cardElementWeb.innerHTML = `
         <div class="container card-container">
@@ -153,9 +156,144 @@ cardwebnar.forEach((cardWeb, index) => {
             </div>
         </div>
     </div>
-`;
-
+`
+    capawebnar.appendChild(cardContainerWeb)
     cardContainerWeb.appendChild(cardElementWeb)
 })
+//fim webnar
 
-capawebnar.appendChild(cardContainerWeb)
+
+//inicio da jornada
+const jornada = [
+        {
+            capa: 'https://img.youtube.com/vi/FiZMowbaiJA/sddefault.jpg',
+            url: 'https://www.youtube.com/embed/FiZMowbaiJA',
+            titulo: 'Webnar - reciando interface do linkedin com fluter'
+        },
+        {
+            capa: 'https://img.youtube.com/vi/cwqDu0ZzbYE/sddefault.jpg',
+            url: 'https://www.youtube.com/embed/cwqDu0ZzbYE',
+            titulo: 'Webnar recriando a interface do instagran com fluter'
+        },
+        {
+            capa: 'https://img.youtube.com/vi/ZMZjQ9aRuIY/sddefault.jpg',
+            url: 'https://www.youtube.com/embed/ZMZjQ9aRuIY',
+            titulo: 'Webnar - recriando a interface do ifood com fluter'
+        },
+        {
+            capa: 'https://img.youtube.com/vi/8sd3wuKTZMA/sddefault.jpg',
+            url: 'https://www.youtube.com/embed/8sd3wuKTZMA',
+            titulo: 'Webnar -  recriando a interface do picpay com fluter'
+        },
+        {
+            capa: 'https://img.youtube.com/vi/-26aqPtgoEY/sddefault.jpg',
+            url: 'https://www.youtube.com/embed/-26aqPtgoEY',
+            titulo: 'Webnar - recriando a interface do whatsapp com fluter'
+        } 
+]
+
+const capajornada = document.querySelector('.UXUI')
+
+const cardJornadaEp = document.createElement('div')
+
+cardJornadaEp.classList.add('d-flex')
+cardJornadaEp.classList.add('flex-wrap')
+
+capajornada.appendChild(cardJornadaEp)
+
+jornada.forEach((jornada, index) => {
+    const modalId = `modal-jornada-${index}`
+    const cardElementJornada = document.createElement('div')
+    cardElementJornada.classList.add('container', 'card-container')
+    cardElementJornada.innerHTML = `
+        <div class="row">
+            <div class="card-content">
+                <img class="card-capa" src="${jornada.capa}">
+                <h4 class="text-light card-hiden">${jornada.titulo}</h4>
+                <button class="btn btn-primary card-hiden" data-bs-toggle="modal" data-bs-target="#${modalId}">assistir</button>
+            </div>
+        </div>
+        
+        <div class="modal" id="${modalId}" tabindex="3" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Adiciona um iframe incorporado ao vídeo do episódio no corpo do modal -->
+                        <iframe width="100%" height="100vh" src="${jornada.url}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `
+
+    cardJornadaEp.appendChild(cardElementJornada);
+});
+// fim da jornada
+
+
+//inicio do diversos
+const diversos = [
+    {
+        capa: 'https://img.youtube.com/vi/QsuhYgsSYQo/sddefault.jpg',
+        url: 'https://www.youtube.com/embed/QsuhYgsSYQo',
+        titulo: 'Webnar - reciando interface do linkedin com fluter'
+    },
+    {
+        capa: 'https://img.youtube.com/vi/ouDn8z3PSqs/sddefault.jpg',
+        url: 'https://www.youtube.com/embed/ouDn8z3PSqs',
+        titulo: 'Webnar recriando a interface do instagran com fluter'
+    },
+    {
+        capa: 'https://img.youtube.com/vi/cQDQNX6NXYo/sddefault.jpg',
+        url: 'https://www.youtube.com/embed/cQDQNX6NXYo',
+        titulo: 'Webnar - recriando a interface do ifood com fluter'
+    },
+    {
+        capa: 'https://img.youtube.com/vi/nKGbolkirBM/sddefault.jpg',
+        url: 'https://www.youtube.com/embed/nKGbolkirBM',
+        titulo: 'Webnar -  recriando a interface do picpay com fluter'
+    },
+    {
+        capa: 'https://img.youtube.com/vi/6sZPsqNjeek/sddefault.jpg',
+        url: 'https://www.youtube.com/embed/6sZPsqNjeek',
+        titulo: 'Webnar - recriando a interface do whatsapp com fluter'
+    } 
+]
+
+const capaDiversos = document.querySelector('.diversos')
+
+const cardDiversosEp = document.createElement('div')
+cardDiversosEp.classList.add('d-flex', 'flex-wrap')
+capaDiversos.appendChild(cardDiversosEp)
+
+diversos.forEach((diversos, index) => {
+    const modalId = `modal-diversos${index}`
+    const cardElementeDiversos = document.createElement('div')
+    cardElementeDiversos.classList.add('container', 'card-container')
+    cardElementeDiversos.innerHTML = `
+    <div class="row">
+            <div class="card-content">
+                <img class="card-capa" src="${diversos.capa}">
+                <h4 class="text-light card-hiden">${diversos.titulo}</h4>
+                <button class="btn btn-primary card-hiden" data-bs-toggle="modal" data-bs-target="#${modalId}">assistir</button>
+            </div>
+        </div>
+        
+        <div class="modal" id="${modalId}" tabindex="3" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="100%" height="100vh" src="${diversos.url}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `
+    cardDiversosEp.appendChild(cardElementeDiversos)
+})

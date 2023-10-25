@@ -8,29 +8,35 @@
     <title>Videos</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <img id="img-grow" src="./src/assets/image/growcast-01.png" alt="imagem-growcast">
 
         <div class="container-fluid">
-            <div class="row d-flex align-items-center justify-content-start">
-                <div class="col">
-                    <a href="index.html"><img id="logo-growflix" src="./src/assets/image/logo-growflix.svg" alt="" id="imgflix"></a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="index.html"><img id="logo-growflix" src="./src/assets/image/logo-growflix.svg" alt="" id="imgflix"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link text-secondary" href="#header">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#episodios">Growcast[episodios]</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#webnar">Webnar em fluter</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#jornada">jornada UX/UI</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="#diversos">Diversos</a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="col">
-                    <a href="index.html" class="text-light">Inicio</a>
-                </div>
-                <div class="col">
-                    <a href="#" class="text-secondary">Growcast[episodios]</a>
-                </div>
-                <div class="col">
-                    <a href="#" class="text-secondary">Webnar em fluter</a>
-                </div>
-                <div class="col">
-                    <a href="#" class="text-secondary">jornada UX/UI</a>
-                </div>
-                <div class="col">
-                    <a href="#" class="text-secondary">Diversos</a>
-                </div>
+                </nav>
             </div>
 
             <div class="container-fluid container-2">
@@ -43,11 +49,10 @@
                 </div>
             </div>
         </div>
-        
     </header>
     <main class="bg-black">
         <section>
-            <h2 class="text-light">Growcast [episodios]</h2>
+            <h2 class="text-light" id="episodios">Growcast [episodios]</h2>
             <div class="container-fluid">
                 <div class="row">
                     <div class="card-episodios"></div>
@@ -55,10 +60,26 @@
             </div>
         </section>
         <section>
-            <h2 class="text-light">Webnar em fluter</h2>
+            <h2 class="text-light" id="webnar">Webnar em fluter</h2>
             <div class="container-fluid">
                 <div class="row">
                     <div class="card-webnar"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="text-light" id="jornada">Jornada UX/UI</h2>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="UXUI"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="text-light" id="diversos">Diversos</h2>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="diversos"></div>
                 </div>
             </div>
         </section>
